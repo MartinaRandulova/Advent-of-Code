@@ -2,6 +2,7 @@ const { readFileSync } = require('fs');
 
 const contentsArr = readFileSync('./input.txt', 'utf-8').split('\n');
 
+//answer to the first part of task
 console.log(contentsArr.reduce((sum, round) => {
   let elf = round[0];
   let me = round[2]
@@ -34,6 +35,7 @@ console.log(contentsArr.reduce((sum, round) => {
   }
 }, 0))
 
+//answer to the second part of task
 console.log(contentsArr.reduce((sum, round) => {
   if (round[0] === 'A' && round[2] == 'X') {
     return sum + 3
