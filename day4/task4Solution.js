@@ -7,12 +7,12 @@ let onlyOverlaps = 0;
 
 contentsArr.forEach(row => {
   let boardersNum = row.split(/,|-/).map(boarder => Number(boarder));
-  console.log(boardersNum)
+
   // Task 1
-  if ((boardersNum[0] <= boardersNum[2] && boardersNum[1] >= boardersNum[3]) || (boardersNum[0] >= boardersNum[2] && boardersNum[1] <= boardersNum[3])) { fullyContainsCount++; console.log('contains') }
+  if ((boardersNum[0] <= boardersNum[2] && boardersNum[1] >= boardersNum[3]) || (boardersNum[0] >= boardersNum[2] && boardersNum[1] <= boardersNum[3])) { fullyContainsCount++; }
 
   // Task 2
-  if ((boardersNum[1] <= boardersNum[2] && boardersNum[0] >= boardersNum[3]) || (boardersNum[1] >= boardersNum[2] && boardersNum[0] <= boardersNum[3])) { onlyOverlaps++; console.log('overlaps') }
+  if ((boardersNum[1] <= boardersNum[2] && boardersNum[0] >= boardersNum[3]) || (boardersNum[1] >= boardersNum[2] && boardersNum[0] <= boardersNum[3])) { onlyOverlaps++; }
 
 });
 console.log(fullyContainsCount);
