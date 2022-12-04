@@ -19,4 +19,3 @@ console.log(fullyContainsCount);
 console.log(onlyOverlaps);
 
 
-// Task 2
