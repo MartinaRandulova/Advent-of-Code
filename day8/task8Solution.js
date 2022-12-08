@@ -69,39 +69,3 @@ for (let indX = 1; indX < inputRowArr.length - 1; indX++) {
 
 console.log(visibleTreesCount); //answer to the 1st part
 console.log(highestScenicScore); //answer to the 2nd part
-
-
-
-
-
-
-
-
-
-
-
-// console.log(inputRowArr)
-// let visibleTreesCount = 16;
-
-// for (let indexR = 1; indexR < inputRowArr.length - 1; indexR++) {
-//   for (let indexC = 1; indexC < inputRowArr[0].length - 1; indexC++) {
-//     for (let compareInd = 0; compareInd < inputRowArr.length - 1; compareInd++) {
-//       if (inputRowArr[indexR][indexC] > inputRowArr[indexR][compareInd]) {
-//         console.log('isHigher?:' + inputRowArr[indexR][indexC]);
-//         console.log('nextTree' + inputRowArr[compareInd][indexC])
-//         console.log('nextTree' + inputRowArr[indexR][compareInd])
-//         visibleTreesCount++
-//         break;
-//       } else {
-//         for (let compareInd2 = 0; compareInd2 < inputRowArr.length - 1; compareInd2++) {
-//           if (inputRowArr[indexR][indexC] > inputRowArr[compareInd][indexC]) {
-//             visibleTreesCount++
-//             break;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-// console.log(visibleTreesCount);
