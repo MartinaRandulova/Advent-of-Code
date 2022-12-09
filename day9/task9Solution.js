@@ -4,8 +4,8 @@ const calculateVisitedPlaces = (numberOfKnots) => {
   const movingInstructionsArr = readFileSync('./input.txt', 'utf-8').split('\n');
   const matrixDimension = 600;
   const motionMatrixArr = Array.from(Array(matrixDimension), () => []).map(arr => Array.from(Array(matrixDimension), () => '.')); //preparing motion space matrix
-  //const numberOfKnots = 10;
   const currentPositionsOfPoints = Array.from(Array(numberOfKnots), () => [500, 200]); //starting positions of rope points (the first is the head)
+
   const calculateDeltas = (tailNumber) => [currentPositionsOfPoints[tailNumber - 1][1] - currentPositionsOfPoints[tailNumber][1], currentPositionsOfPoints[tailNumber - 1][0] - currentPositionsOfPoints[tailNumber][0]];
 
   movingInstructionsArr.forEach(instruction => {
@@ -59,12 +59,12 @@ const calculateVisitedPlaces = (numberOfKnots) => {
           }
         }
       }
-      motionMatrixArr[currentPositionsOfPoints[numberOfKnots - 1][0]][currentPositionsOfPoints[numberOfKnots - 1][1]] = '#';
+      motionMatrixArr[currentPositionsOfPoints[numberOfKnots - 1][0]][currentPositionsOfPoints[numberOfKnots - 1][1]] = '#'; //labeling visited positions
     }
   });
 
   let positions = 0;
-  motionMatrixArr.forEach(el => el.forEach(el => el.includes('#') ? positions++ : null));
+  motionMatrixArr.forEach(el => el.forEach(el => el.includes('#') ? positions++ : null)); //counting labelled positions
   return positions
 }
 
